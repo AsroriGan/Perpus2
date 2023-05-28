@@ -133,6 +133,10 @@ Route::post('/pilihan',[PengembalianController::class,'pilihan'])->name('pilihan
 Route::get('/cetakpengembalian',[PengembalianController::class,'cetakpengembalian'])->name('cetakpengembalian');
 Route::get('/disabled',[PengembalianController::class,'disabled'])->name('disabled');
 
+//Guru
+Route::get('/daftarguru',[DaftarAnggotaController::class,'daftaranggota'])->name('daftaranggota');
+
+
 // siswa
 Route::get('/daftaranggota',[DaftarAnggotaController::class,'daftaranggota'])->name('daftaranggota');
 Route::get('/tambahanggota',[DaftarAnggotaController::class,'tambahanggota'])->name('tambahanggota');

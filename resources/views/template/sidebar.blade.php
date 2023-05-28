@@ -172,6 +172,13 @@
 		</li>
 		<li class="menu-label">Daftar Anggota</li>
 		<li>
+			<a  href="/daftarguru">
+				<div class="parent-icon icon-color-16"> <i class="fadeIn animated bx bx-user-circle"></i>
+				</div>
+				<div class="menu-title"> Guru</div>
+			</a>
+		</li>
+		<li>
 			<a  href="/daftaranggota">
 				<div class="parent-icon icon-color-16"> <i class="fadeIn animated bx bx-user-circle"></i>
 				</div>
