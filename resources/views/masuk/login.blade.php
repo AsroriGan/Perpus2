@@ -137,9 +137,11 @@
                         </div>
                         <button type="submit" class="btn btn-info btn-block btn-sm my-3 py-2"
                             style="border-radius: 7px;">Masuk</button>
-                        <div class="text-center" style="font-family: 'Open Sans SemiBold';">
+                        <a href="/" class="btn btn-info btn-block btn-sm my-3 py-2"
+                            style="border-radius: a7px;">Kembali</a>
+                        {{-- <div class="text-center" style="font-family: 'Open Sans SemiBold';">
                             Tidak Memiliki Akun? <a href="register">Daftar Sekarang</a>
-                        </div>
+                        </div> --}}
                         <!--   <a href="#" data-toggle="modal" data-target="#uuss" style="width: 100%; margin-top: 15px; display: block; text-align: center;">User Demo</a>
  -->
                     </div>

@@ -152,13 +152,14 @@ class LoginController extends Controller
             'password.min' => 'Password harus minimal 8 karakter',
         ]);
        User::create([
+            
             'username' => $request->username,
             'name' => $request->name,
             'notelepon' => $request->notelepon,
             'email' => $request->email,
             'password' => bcrypt($request->password),
-            'role' => 'Petugas',
-            'kelas' => 'Petugas',
+            'role' => 'user',
+            'kelas' => $request->kelas,
             'remember_token' => Str::random(60),
         ]);
         // dd ($data);

@@ -108,7 +108,7 @@
                 <script src="https://code.highcharts.com/highcharts.js"></script>
                 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-                <script>
+                <!-- <script>
                     const chart = Highcharts.chart('chartnilai', {
                         title: {
                             text: 'Laporan Denda Bulanan'
@@ -154,7 +154,7 @@
                                 }
                             });
                     });
-                </script>
+                </script> -->
 
                 <script>
                     var select = document.getElementById('tahun');

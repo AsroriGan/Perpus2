@@ -128,7 +128,7 @@
                         <div class="form-group row">
                             <div class="col-md-12 col-12">
                                 <label>Password</label>
-                                <input id="inp1" class="form-control" type="password"placeholder="Password"
+                                <input id="inp1" class="form-control" type=" password"placeholder="Password"
                                     name="password" required>
                             </div>
                         </div>
