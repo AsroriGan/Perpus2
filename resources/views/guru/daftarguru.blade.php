@@ -26,7 +26,7 @@
                                     <li class="breadcrumb-item"><a href="daftaranggota"><i
                                                 class="fadeIn animated bx bx-user-circle"></i></a>
                                     </li>
-                                    <li class="breadcrumb-item active" aria-current="page">Siswa</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Guru</li>
                                 </ol>
                             </nav>
                         </div>
@@ -37,7 +37,7 @@
                         <div class="card-body">
                             <div>
                                 <a id="table2-new-row-button" href="tambahanggota"
-                                    class="btn btn-outline-info btn-sm mb-4 pr-3">Tambah Siswa</a>
+                                    class="btn btn-outline-info btn-sm mb-4 pr-3">Tambah Guru</a>
                                 <a data-bs-toggle="modal" data-bs-target="#importexcel" class="btn btn-outline-success btn-sm mb-4">Import Excel 
                                 </a>  
                                   <button onclick="cetakid('{{ route('cetakidcard') }}')"
@@ -56,13 +56,10 @@
                                                     <input type="checkbox" onchange="checkAll(this)" name="chk">
                                                     </th>
                                                         <th>No.</th>
-                                                        <th>Foto</th>
-                                                        <th>Nisn</th>
-                                                        <th>Nama Siswa</th>
+                                                        <th>Nuptk</th>
+                                                        <th>Nama Guru</th>
                                                         <th>Jenis Kelamin</th>
-                                                        <th>Tgl.Lahir</th>
-                                                        <th>Kelas</th>
-                                                        <th>Alamat</th>
+                                                        <th>Foto</th>
                                                         {{-- <th>Qr Code</th> --}}
                                                         <th>Aksi</th>
                                                     </tr>
@@ -77,16 +74,12 @@
                                                             <td><input type="checkbox" id="example" name="id[]" value="{{$row->id}}"  class="checkbox_check">
                                                             </td> 
                                                             <td scope="row">{{ $no++ }}</td>
+                                                            <td>{{ $row->nuptk }}</td>
+                                                            <td>{{ $row->nama }}</td>
+                                                            <td>{{ $row->jeniskelamin }}</td>
                                                             <td><img src="{{ asset('fotobuku/' . $row->foto) }}"
                                                                     alt="" style="width: 70px; height: 70px">
                                                             </td>
-                                                            <td>{{ $row->nisn }}</td>
-                                                            <td>{{ $row->nama }}</td>
-                                                             <td>{{ $row->jenis_kelamin }}</td>
-                                                            <td>{{ Carbon\Carbon::parse($row->tgl_lahir)->format('d-m-Y') }}
-                                                            </td>
-                                                            <td>{{ $row->kelas }}</td>
-                                                            <td>{{ $row->alamat }}</td>
                                                             {{-- <td> {!! QrCode::size(65)->generate($row->nisn) !!}
                                                             </td> --}}
 
@@ -126,7 +119,7 @@
                     @foreach ($data as $row)
                         @include('anggota.editanggota')
                     @endforeach
-                    @include('anggota.importexcel')
+                    @include("guru.importexcel")
                 </div>
                 <!-- end wrapper -->
                 @include('template.script')

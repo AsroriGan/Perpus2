@@ -82,7 +82,7 @@ class DaftarAnggotaController extends Controller
             'notelepon' => $request->notelepon,
             'email' => $request->email,
             'password' => bcrypt($request->password),
-            'role' => 'petugas',
+            'role' => 'user',
             'kelas' => 'petugas',
             'remember_token' => Str::random(60),
         ]);

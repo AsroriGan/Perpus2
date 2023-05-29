@@ -9,12 +9,13 @@ use App\Http\Controllers\RusakController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\BukurusakController;
+use App\Http\Controllers\DafatrGuruController;
 use App\Http\Controllers\DaftarbukuController;
 use App\Http\Controllers\PeminjamanController;
+use App\Http\Controllers\RekapperpusController;
 use App\Http\Controllers\PengembalianController;
 use App\Http\Controllers\DaftarAnggotaController;
 use App\Http\Controllers\LaporanpinjamController;
-use App\Http\Controllers\RekapperpusController;
 
 
 /*
@@ -134,7 +135,8 @@ Route::get('/cetakpengembalian',[PengembalianController::class,'cetakpengembalia
 Route::get('/disabled',[PengembalianController::class,'disabled'])->name('disabled');
 
 //Guru
-Route::get('/daftarguru',[DaftarAnggotaController::class,'daftaranggota'])->name('daftaranggota');
+Route::get('/daftarguru',[DafatrGuruController::class,'daftarguru'])->name('daftarguru');
+Route::post('/importexcelguru',[DafatrGuruController::class,'importexcelguru'])->name('importexcelguru');
 
 
 // siswa

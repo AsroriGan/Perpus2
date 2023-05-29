@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class DafatrGuru extends Model
 {
     use HasFactory;
+    protected $guarded = [];
+    protected $dates = ['created_at'];
 }
